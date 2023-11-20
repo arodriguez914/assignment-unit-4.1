@@ -56,46 +56,97 @@ console.log(isPositive(0));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast(array) {
+numArr = [1, 10, 8, 2, 5, 5, 4];
 
-}
+function getLast(array){
+  for (let i = 0; i < array.length; i++)
+    return array[array.length - 1];
+  }
+
+getLast(numArr);
+console.log(getLast(numArr));
+
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
 
+
+
+function find(value, array) {
+for (i = 0; i < array.length; i++)
+  if (value == array[i]){
+    return true;
+  }
+  if (value !== array[i]) {
+    return false
+  }
 }
+
+
+console.log(numArr);
+console.log('Number 5 found:', find(5, numArr));
+console.log('Number 3 found:', find(3, numArr));
+
 
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
 
-}
+let sentence = 'The dog is brown.';
+
+function isFirstLetter(letter, string) {
+  if (letter == string.charAt(0)){
+      return true;
+    } else {
+       return false;
+    }
+  }
+  
+  console.log(isFirstLetter('T', sentence));
+
 
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
   let sum = 0;
-  // TODO: loop to add items
 
+  // TODO: loop to add items
+  for (let i = 0; i < array.length; i++ ) {
+     sum += array[i];
+  }
+      return sum;
   // TODO: return the sum
 }
 
+console.log(sumAll(numArr));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {
 
+function allPositive(ar){
+  const posArr = ar.filter(num => num -1);
+  return posArr;
 }
 
-
+console.log(allPositive(numArr));
+console.log(posArr);
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+//Create a function that takes the age in years and returns the age in days.
+//Ignore leap years and days between last birthday and now.
+//Expect only positive integer inputs.
+
+function calcAge(age){
+  return age * 365;
+}
+
+console.log('I am', calcAge(29),'days old');
 
 
 // DO NOT MODIFY
