@@ -127,13 +127,16 @@ console.log(sumAll(numArr));
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
-function allPositive(ar){
-  const posArr = ar.filter(num => num -1);
-  return posArr;
+let array2 = [-1, -2, -3, -4, 0, 1, 2, 3]
+
+function allPositive(value){
+  return value > 0;
 }
 
-console.log(allPositive(numArr));
-console.log(posArr);
+const even = array2.filter(allPositive);
+
+console.log(even);
+
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
